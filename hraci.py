@@ -2,10 +2,10 @@
 
 from random import randrange
 
-vysledky1 = [ ]
-vysledky2 = [ ]
-vysledky3 = [ ]
-vysledky4 = [ ]
+vysledky1 = []
+vysledky2 = []
+vysledky3 = []
+vysledky4 = []
 
 
 def hra(vysledky1,vysledky2,vysledky3,vysledky4):
@@ -34,6 +34,7 @@ def hra(vysledky1,vysledky2,vysledky3,vysledky4):
 	print("vysledky4 ={}".format(vysledky4))
 	print("")
 	
+	#jednotlívá kola
 	a = [vysledky1[0], vysledky2[0], vysledky3[0], vysledky4[0]]
 	b = [vysledky1[1], vysledky2[1], vysledky3[1], vysledky4[1]]
 	c = [vysledky1[2], vysledky2[2], vysledky3[2], vysledky4[2]]
@@ -41,14 +42,16 @@ def hra(vysledky1,vysledky2,vysledky3,vysledky4):
 	e = [vysledky1[4], vysledky2[4], vysledky3[4], vysledky4[4]]
 	pocet_her = [a,b,c,d,e]	
 	
+	#maximální hodnoty v každém kole
 	aa = max(a)
 	bb = max(b)
 	cc = max(c)
 	dd = max(d)
 	ee = max(e)
 	
-	celkovy_vitez = []
-
+	celkovy_vitez = [] #zde se budou hromadit body za jednotlivá kola pro hráče
+	
+	#protože budeme maxima po kole vždy odstraňovat, čísla v seznamu se budou měnit své pozice, budeme 		pozice zase "vracet" zpět
 	aaa = 0
 	bbb = 0
 	ccc = 0
@@ -115,7 +118,6 @@ def hra(vysledky1,vysledky2,vysledky3,vysledky4):
 		if c1 in celkovy_vitez:
 			hrac1 = hrac1 + 1
 			celkovy_vitez.remove(c1)
-	
 	print("")
 	print("Celkové vítězství:")		
 	hraci = [hrac1,hrac2,hrac3,hrac4]
