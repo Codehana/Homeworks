@@ -32,7 +32,7 @@ def hra(vysledky1,vysledky2,vysledky3,vysledky4):
 	print("vysledky2 ={}".format(vysledky2))
 	print("vysledky3 ={}".format(vysledky3))
 	print("vysledky4 ={}".format(vysledky4))
-	print("")
+	print()
 	
 	#jednotlívá kola
 	a = [vysledky1[0], vysledky2[0], vysledky3[0], vysledky4[0]]
@@ -97,6 +97,8 @@ def hra(vysledky1,vysledky2,vysledky3,vysledky4):
 	c2 = 2
 	c1 = 1
 
+	#číslo počtu vyhrání
+
 	hrac1 = 0
 	hrac2 = 0
 	hrac3 = 0
@@ -118,7 +120,7 @@ def hra(vysledky1,vysledky2,vysledky3,vysledky4):
 		if c1 in celkovy_vitez:
 			hrac1 = hrac1 + 1
 			celkovy_vitez.remove(c1)
-	print("")
+	print()
 	print("Celkové vítězství:")		
 	hraci = [hrac1,hrac2,hrac3,hrac4]
 	hraci_max = max(hraci)
